@@ -7,13 +7,16 @@
     "lib": "lib"
   },
   "dependencies": {
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "fs-readdir-recursive": "^1.1.0"
   },
   "devDependencies": {
+    "eslint": "^4.12.0",
     "jest": "^21.2.1"
   },
   "scripts": {
-    "test": "jest -i --coverage"
+    "test": "jest -i --coverage",
+    "lint": "eslint ./"
   },
   "author": "Matthew LeBlanc",
   "license": "ISC"
