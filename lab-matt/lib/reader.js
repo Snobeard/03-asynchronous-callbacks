@@ -10,16 +10,19 @@ let folder = readFolder(`${__dirname}/../assets`);
 
 
 // read.files = (callback) => {
-//   folder.map((eachElement) => {
-//     fs.readFile(`${__dirname}/../assets/${eachElement}`, (err, data) => {
+//   let fileArray = folder.map((eachElement) => {
+//     let a = fs.readFile(`${__dirname}/../assets/${eachElement}`, (err, data) => {
 //       if (err) callback(err);
 //       console.log(data.toString());
+//       return data.toString();
 //     });
+//     console.log(a);
 //   });
-//   callback(null, files);
+//   console.log(fileArray);
+//   callback(null, fileArray);
 // };
 //
-// read.files();
+// read.files((error, data) => { console.log(data);});
 
 
 read.files = (callback) => {
@@ -42,4 +45,4 @@ read.files = (callback) => {
   });
 };
 
-// read.files(() => {});
+read.files(() => {});
